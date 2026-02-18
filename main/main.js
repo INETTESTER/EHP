@@ -2,20 +2,18 @@
 import { sleep } from 'k6';
 import { error_check } from '../check/check.js';
 import { scenario } from 'k6/execution';
-import { DownloadFile, GetProfile, PostProfile, PostProfile_2, PostProfile_3, UploadFile } from '../api/example.js';
+import { auth } from '../api/auth.js';
+import { homeload_admin } from '../api/homeload_admin.js';
+import { homeload_iservice } from '../api/homeload_iservice.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  response = GetProfile()
-  //response = PostProfile()
-  //response = PostProfile_2()
-  //response = PostProfile_3(scenario)
-  //response = DownloadFile()
-  //response = UploadFile()
-  //response = UploadFile_2()
+  //response = auth()
+  //response = homeload_admin()
+  //response = homeload_iservice()
 
 
   error_check(response);
