@@ -5,6 +5,7 @@ import { scenario } from 'k6/execution';
 import { auth } from '../api/auth.js';
 import { homeload_admin } from '../api/homeload_admin.js';
 import { homeload_iservice } from '../api/homeload_iservice.js';
+import { ehp_register } from '../api/ehp_register.js';
 
 
 
@@ -14,6 +15,7 @@ export default function () {    //เรียกใช้ API ใน export def
   //response = auth()
   //response = homeload_admin()
   //response = homeload_iservice()
+  //response = ehp_register()
 
 
   error_check(response);
